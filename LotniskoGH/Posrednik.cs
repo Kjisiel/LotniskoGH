@@ -8,7 +8,9 @@ namespace L1
 {
     class Posrednik : Klient
     {
-        private string nazwa;
+        public string nazwa { get; set; }
+
+        public Posrednik() { }
 
         public Posrednik(int ID, string nazwa) : base(ID)
         {

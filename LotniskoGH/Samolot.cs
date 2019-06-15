@@ -8,9 +8,12 @@ namespace L1
 {
     class Samolot
     {
-        protected int ID;
-        private string nazwa;
-        private int zasieg, liczbamiejsc;
+        public int ID { get; set; }
+        public string nazwa { get; set; }
+        public int zasieg { get; set; }
+        public int liczbamiejsc { get; set; }
+
+        public Samolot() { }
 
         public Samolot(int iD, string nazwa, int zasieg, int liczbamiejsc)
         {
@@ -18,21 +21,6 @@ namespace L1
             this.nazwa = nazwa;
             this.zasieg = zasieg;
             this.liczbamiejsc = liczbamiejsc;
-        }
-
-        public int getID()
-        {
-            return this.ID;
-        }
-
-        public int getZasieg()
-        {
-            return this.zasieg;
-        }
-
-        public int getLiczbaMiejsc()
-        {
-            return this.liczbamiejsc;
         }
     }
 }

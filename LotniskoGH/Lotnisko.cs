@@ -8,9 +8,14 @@ namespace L1
 {
     class Lotnisko
     {
-        protected int ID;
-        private string nazwa, panstwo, miasto;
-        private double szerokoscGeo, wysokoscGeo;
+        public int ID { get; set; }
+        public string nazwa { get; set; }
+        public string panstwo { get; set; }
+        public string miasto { get; set; }
+        public double szerokoscGeo { get; set; }
+        public double wysokoscGeo { get; set; }
+
+        public Lotnisko() { }
 
         public Lotnisko(int iD, string nazwa, string panstwo, string miasto, double szerokoscGeo, double wysokoscGeo)
         {
@@ -20,11 +25,6 @@ namespace L1
             this.miasto = miasto;
             this.szerokoscGeo = szerokoscGeo;
             this.wysokoscGeo = wysokoscGeo;
-        }
-
-        public int getID()
-        {
-            return this.ID;
         }
     }
 }

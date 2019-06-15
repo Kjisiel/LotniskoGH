@@ -8,10 +8,12 @@ namespace L1
 {
     class Lot
     {
-        protected int ID;
-        private int wykupioneMiejsca;
-        Trasa trasa;
-        Samolot samolot;
+        public int ID { get; set; }
+        public int wykupioneMiejsca { get; set; }
+        public Trasa trasa;
+        public Samolot samolot;
+
+        public Lot() { }
 
         public Lot(int iD, int wykupioneMiejsca, Trasa trasa, Samolot samolot)
         {
@@ -19,16 +21,6 @@ namespace L1
             this.wykupioneMiejsca = wykupioneMiejsca;
             this.trasa = trasa;
             this.samolot = samolot;
-        }
-
-        public int getID()
-        {
-            return this.ID;
-        }
-
-        public int getWykupioneMiejsca()
-        {
-            return this.wykupioneMiejsca;
         }
     }
 }

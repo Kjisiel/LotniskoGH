@@ -8,10 +8,13 @@ namespace L1
 {
     class Trasa
     {
-        protected int ID;
-        Lotnisko odlot;
-        Lotnisko przylot;
-        private int odleglosc, czaslotu;
+        public int ID { get; set; }
+        public Lotnisko odlot;
+        public Lotnisko przylot;
+        public int odleglosc { get; set; }
+        public int czaslotu { get; set; }
+
+        public Trasa() { }
 
         public Trasa(int iD, Lotnisko odlot, Lotnisko przylot, int odleglosc, int czaslotu)
         {
@@ -20,11 +23,6 @@ namespace L1
             this.przylot = przylot;
             this.odleglosc = odleglosc;
             this.czaslotu = czaslotu;
-        }
-
-        public int getID()
-        {
-            return this.ID;
         }
     }
 }

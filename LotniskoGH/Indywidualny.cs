@@ -8,7 +8,10 @@ namespace L1
 {
     class Indywidualny : Klient
     {
-        private string imie, nazwisko;
+        public string imie { set; get; }
+        public string nazwisko { set; get; }
+
+        public Indywidualny() { }
 
         public Indywidualny(int ID, string imie, string nazwisko) : base(ID)
         {

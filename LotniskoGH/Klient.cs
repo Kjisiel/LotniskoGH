@@ -8,16 +8,13 @@ namespace L1
 {
     class Klient
     {
-        protected int ID;
+        public int ID { get; set; }
+
+        public Klient() { }
 
         public Klient(int ID)
         {
             this.ID = ID;
-        }
-
-        public int getID()
-        {
-            return this.ID;
         }
     }
 }

@@ -8,11 +8,13 @@ namespace L1
 {
     class Bilet
     {
-        protected int ID;
-        private int miejsce;
-        private float kwota;
-        Klient klient;
-        Lot lot;
+        public int ID { get; set; }
+        public int miejsce { get; set; }
+        public float kwota { get; set; }
+        public Klient klient;
+        public Lot lot;
+
+        public Bilet() { }
 
         public Bilet(int iD, int miejsce, float kwota, Klient klient, Lot lot)
         {
@@ -21,11 +23,6 @@ namespace L1
             this.kwota = kwota;
             this.klient = klient;
             this.lot = lot;
-        }
-
-        public int getID()
-        {
-            return this.ID;
         }
     }
 }
