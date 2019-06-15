@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.IO;
 
+//TODO przeglad i usuwanie obiektow z list
+
 namespace L1
 {
     class BazaDanych
@@ -47,7 +49,7 @@ namespace L1
             bilety.Add(bilet);
         }
 
-        public void zapisz()
+        public void zapis()
         {
             XmlSerializer sklienci = new XmlSerializer(typeof(List<Klient>));
             StreamWriter zklienci = new StreamWriter("klienci.xml");
@@ -78,6 +80,39 @@ namespace L1
             StreamWriter zbilety = new StreamWriter("bilety.xml");
             sbilety.Serialize(zbilety, bilety);
             zbilety.Close();
+        }
+
+        public void odczyt()
+        {
+            XmlSerializer dklienci = new XmlSerializer(typeof(List<Klient>));
+            StreamReader oklienci = new StreamReader("klienci.xml");
+            klienci = (List<Klient>)dklienci.Deserialize(oklienci);
+            oklienci.Close();
+
+            XmlSerializer dsamoloty = new XmlSerializer(typeof(List<Samolot>));
+            StreamReader osamoloty = new StreamReader("samoloty.xml");
+            samoloty = (List<Samolot>)dsamoloty.Deserialize(osamoloty);
+            osamoloty.Close();
+
+            XmlSerializer dlotniska = new XmlSerializer(typeof(List<Lotnisko>));
+            StreamReader olotniska = new StreamReader("lotniska.xml");
+            lotniska = (List<Lotnisko>)dlotniska.Deserialize(olotniska);
+            olotniska.Close();
+
+            XmlSerializer dtrasy = new XmlSerializer(typeof(List<Trasa>));
+            StreamReader otrasy = new StreamReader("trasy.xml");
+            trasy = (List<Trasa>)dtrasy.Deserialize(otrasy);
+            otrasy.Close();
+
+            XmlSerializer dloty = new XmlSerializer(typeof(List<Lot>));
+            StreamReader oloty = new StreamReader("loty.xml");
+            loty = (List<Lot>)dloty.Deserialize(oloty);
+            oloty.Close();
+
+            XmlSerializer dbilety = new XmlSerializer(typeof(List<Bilet>));
+            StreamReader obilety = new StreamReader("bilety.xml");
+            bilety = (List<Bilet>)dbilety.Deserialize(obilety);
+            obilety.Close();
         }
     }
 }
