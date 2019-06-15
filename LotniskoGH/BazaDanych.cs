@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.IO;
 
-//TODO przeglad i usuwanie obiektow z list
+//TODO przeglad i inne usuwanie (?) obiektow z list
 
 namespace L1
 {
@@ -47,6 +47,36 @@ namespace L1
         public static void dodajBilet(Bilet bilet)
         {
             bilety.Add(bilet);
+        }
+
+        public static void usunKlienta(Klient klient)
+        {
+            klienci.Remove(klient);
+        }
+
+        public static void usunSamolot(Samolot samolot)
+        {
+            samoloty.Remove(samolot);
+        }
+
+        public static void usunLotnisko(Lotnisko lotnisko)
+        {
+            lotniska.Remove(lotnisko);
+        }
+
+        public static void usunTrase(Trasa trasa)
+        {
+            trasy.Remove(trasa);
+        }
+
+        public static void usunLot(Lot lot)
+        {
+            loty.Remove(lot);
+        }
+
+        public static void usunBilet(Bilet bilet)
+        {
+            bilety.Remove(bilet);
         }
 
         public void zapis()
